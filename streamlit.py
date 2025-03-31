@@ -3,7 +3,7 @@ from PIL import Image
 import torch
 import pytesseract
 import cohere
-import language_tool_python
+#import language_tool_python
 from transformers import BlipProcessor, BlipForConditionalGeneration
 #import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
