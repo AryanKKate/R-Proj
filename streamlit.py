@@ -24,13 +24,13 @@ def generate_caption(image):
 def extract_text_from_image(image):
     return pytesseract.image_to_string(image)
 
-def is_grammatically_correct(text):
-    return len(tool.check(text)) == 0
+# def is_grammatically_correct(text):
+#     return len(tool.check(text)) == 0
 
 def query_cohere(caption, ocr_text, user_question):
     prompt = f"Image Caption: {caption}\nUser Question: {user_question}\nAnswer:"
-    if is_grammatically_correct(ocr_text):
-        prompt = f"Image Caption: {caption}\nUser Question: {user_question}\nAnswer:"
+    # if is_grammatically_correct(ocr_text):
+    #     prompt = f"Image Caption: {caption}\nUser Question: {user_question}\nAnswer:"
     
     response = co.generate(
         model="command-xlarge", prompt=prompt, max_tokens=100, temperature=0.75
