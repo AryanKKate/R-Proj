@@ -14,7 +14,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base").to(device)
 co = cohere.Client("7HpPc5ghLeUjTWUHljnX8Y7xgxRcRhdOUg2bv9Px")  # Replace with your API key
-tool = language_tool_python.LanguageTool('en-US')
+#tool = language_tool_python.LanguageTool('en-US')
 
 def generate_caption(image):
     inputs = blip_processor(image, return_tensors="pt").to(device)
