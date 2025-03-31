@@ -1,0 +1,10 @@
+streamlit
+torch
+torchvision
+Pillow
+pytesseract
+cohere
+language-tool-python
+transformers
+sentencepiece
+protobuf
